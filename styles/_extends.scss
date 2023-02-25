@@ -1,0 +1,61 @@
+@use "variables";
+
+%fontsStyleNav{
+  font-family: 'Aleo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+}
+%fontsStyleTitle{
+  font-family: 'Aleo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  text-transform: capitalize;
+  color: variables.$colorMain;
+}
+%fontsStyleText{
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  color: variables.$colorMain;
+}
+%fontsStyleGrandTitle{
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: variables.$colorMain;
+}
+%buttonStyle{
+  display: flex;
+  padding: 20px 32px;
+  background-color: #5373FD;
+  font-family: 'Aleo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  color: variables.$colorMain;
+  &:hover{
+    background-color: #4e64c7;
+    filter: drop-shadow(0 0 6px #6074c2);
+    transition: all 0.1s ease-in-out;
+    &:active{
+      background-color: #5a68a9;
+    }
+  }
+}

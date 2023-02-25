@@ -1,0 +1,494 @@
+@import "variables";
+@import "extends";
+@import "mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  //background: white;
+}
+
+ul, li {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  padding: 0 300px 0;
+  width: 100%;
+  max-width: 1920px;
+}
+
+//CODE__CODE__CODE__CODE__CODE__CODE__CODE__CODE__CODE__CODE__CODE__CODE__CODE__CODE__
+.logo a {
+  //styles
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.button{
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+}
+
+.header {
+  background: lightskyblue url("/images/headerBackground.png") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0 auto;
+
+  &__body {
+    padding-top: 295px;
+
+    &__text {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 48px;
+
+      & > h1 {
+
+        font-family: 'Josefin Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 52px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+      }
+
+      & > p {
+        top: 355px;
+        font-family: 'Josefin Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: 0.31em;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  &__search-form {
+    margin: 0 auto;
+    position: relative;
+    width: 647px;
+
+    & > input {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 59px;
+
+      //height: 60px;
+      &::placeholder {
+        font-family: 'Josefin Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2em;
+        color: #999999;
+        padding: 20px 36px;
+      }
+      &[type=search]{
+        font-size: 20px;
+        padding:0 150px 0 35px;
+      }
+    }
+
+    & > button {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      gap: 12px;
+      max-width: 140px;
+      border: none;
+      display: flex;
+      padding: 16px 24px;
+      background: $colorSecont;
+      font-family: 'Aleo';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $colorMain;
+      &:hover{
+        background-color: #4e64c7;
+      }
+      &:active svg{
+        position: relative;
+        top: 1px;
+        left: 1px;
+        filter: drop-shadow(0 0 5px #41416b);
+        transition: all 0.1s ease-in-out;
+      }
+      & > svg {
+        fill: $colorMain;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__footer {
+    text-align: center;
+    padding-top: 271px;
+
+    & > p {
+      text-align: center;
+      position: relative;
+      //styles
+      &>a{
+        font-family: 'Josefin Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2em;
+        color: #FFFFFF;
+        &:hover{
+          filter: drop-shadow(10px 10px 10px #b0a7a7);
+          transition: 0.5s;
+        }
+      }
+      &:after{
+        content:'';
+        position: absolute;
+        display: block;
+        background-image: url("/images/svg/arrow.svg");
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        &:hover{
+          transform: translateX(10px);
+        }
+      }
+    }
+  }
+}
+
+//__SECTION-MAPS__SECTION-MAPS__SECTION-MAPS__SECTION-MAPS__SECTION-MAPS__SECTION-MAPS__SECTION-MAPS__SECTION-MAPS
+.maps {
+  background: #5373FD;
+
+  &__logo {
+
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $colorMain;
+
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    & > ul {
+      display: flex;
+      gap: 40px;
+
+      & > li {
+        padding: 32px 0;
+        @extend %fontsStyleNav;
+
+        & > a {
+          color: $colorMain;
+          position: relative;
+          &:hover::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 1px;
+            border-radius: 5px;
+            background-color: #ffffff;
+            transform: scaleX(0);
+          }
+          &:hover::after{
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+//SECTION--WHY__SECTION--WHY__SECTION--WHY__SECTION--WHY__SECTION--WHY__SECTION--WHY__SECTION--WHY__SECTION--WHY__
+.why {
+  background: lightskyblue url("/images/whyBackground.png") no-repeat;
+  background-size: cover;
+  height: 704px;
+  margin: 0 auto;
+
+  &__body {
+    display: flex;
+    gap: 136px;
+
+    &__text-block {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      max-width: 648px;
+      max-height: 344px;
+      margin: 190px 0;
+      overflow: hidden;
+
+      & > h1 {
+        @extend %fontsStyleTitle;
+        padding-bottom: 24px;
+      }
+
+      & > p {
+        @extend %fontsStyleText;
+        padding-bottom: 32px;
+      }
+
+      & > button {
+        @extend %buttonStyle;
+      }
+    }
+
+
+    &__img-block {
+      position: relative;
+      margin-top: 124px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 424px;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+        max-width: 350px;
+        max-height: 220px;
+        object-fit: cover;
+      }
+      & img:last-child {
+        margin-left: 74px;
+      }
+    }
+  }
+}
+
+.banner {
+  height: 306px;
+  background: #333333;
+
+  &__body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    background: url("/images/svg/line.svg") no-repeat center top;
+
+    &__svg-section {
+
+      padding-top: 107px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      & svg {
+        width: 64px;
+        height: 64px;
+        //background: green;
+        //border-radius: 48px;
+        fill: red;
+      }
+
+      & > p {
+        font-family: 'Aleo';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 40px;
+        text-align: center;
+        text-transform: capitalize;
+        color: $colorMain;
+      }
+    }
+  }
+}
+//SECTION-GRAND__SECTION-GRAND__SECTION-GRAND__SECTION-GRAND__SECTION-GRAND__SECTION-GRAND__SECTION-GRAND__SECTION-GRAND
+.grand, .grand-two{
+  background: mediumpurple url("/images/grandBackround.png") no-repeat;
+  height: 684px;
+
+  &__body {
+    display: flex;
+    //justify-content: end;
+    &__text-block {
+      max-width: 50%;
+      padding: 44px 32px;
+      margin-top: 220px;
+      background: rgba(35, 35, 35, 0.9);
+      overflow: hidden;
+      height: 100%;
+      max-height: 344px;
+
+      & > p {
+        @extend %fontsStyleText;
+      }
+
+      & > h3 {
+        @extend %fontsStyleGrandTitle;
+        padding: 16px 0;
+      }
+
+      & > button {
+        margin-top: 24px;
+        @extend %buttonStyle;
+      }
+    }
+  }
+}
+.grand-two {
+  background: darkorange url("/images/grandBackroundTwo.png") no-repeat;
+  height: 684px;
+  &__body{
+    justify-content: end;
+  }
+}
+//SectionWHAT__SectionWHAT__SectionWHAT__SectionWHAT__SectionWHAT__SectionWHAT__SectionWHAT__SectionWHAT__SectionWHAT
+.what{
+  background: url("/images/whatBackround.png") no-repeat;
+  height: 680px;
+  &__body{
+    //display: flex;
+    &>h4{
+      text-align: center;
+      @extend %fontsStyleTitle;
+      padding: 120px 0 60px;
+    }
+    &__info-block{
+      display: flex;
+      justify-content: space-between;
+      &>img{
+        height: 100%;
+        width: 100%;
+        min-width: 440px;
+        min-height:280px;
+        object-fit: cover;
+      }
+      &__text{
+        background: #333333;
+        height: 100%;
+        max-height: 280px;
+        overflow: hidden;
+        &>h3{
+          @extend %fontsStyleGrandTitle;
+          padding-bottom: 16px;
+        }
+        padding: 48px 60px;
+
+        &>p{
+          position: relative;
+          @extend %fontsStyleText;
+          &>span{
+            padding-left: 35px;
+            &:before{
+              content:'';
+              background-image: url("/images/svg/quote-left.svg");
+              background-repeat: no-repeat;
+              display: block;
+              width: 20px;
+              height: 20px;
+              position: absolute;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+.footer{
+  background: black;
+  //width: 1920px;
+  &__body{
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    justify-content: center;
+    align-items: center;
+    &__text{
+      &__title{
+        @extend %fontsStyleGrandTitle;
+        letter-spacing: 0.1em;
+        padding-bottom: 8px;
+        text-align: center;
+
+      }
+      &__subtitle{
+        font-family: 'Josefin Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2em;
+        color: $colorMain;
+      }
+    }
+    &__links{
+      &>ul{
+        display: flex;
+        //justify-content: space-between;
+        gap: 30px;
+        &>li svg{
+          width: 30px;
+          height: 30px;
+          fill: white;
+          &:hover{
+            fill: $colorSecont;
+            box-shadow: 0 0 10px 4px rgba(0,0,0,0.6);
+            transition: .2s linear;
+            transform: scale(1.1,1.1);
+          }
+        }
+      }
+    }
+  }
+}
