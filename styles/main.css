@@ -173,7 +173,7 @@ a {
 }
 
 .header {
-  background: lightskyblue url("/images/headerBackground.png") no-repeat;
+  background: lightskyblue url("../images/headerBackground.png") no-repeat;
   background-size: cover;
   height: 100vh;
   margin: 0 auto;
@@ -291,7 +291,7 @@ a {
   content: "";
   position: absolute;
   display: block;
-  background-image: url("/images/svg/arrow.svg");
+  background-image: url("../images/svg/arrow.svg");
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
@@ -347,7 +347,7 @@ a {
 }
 
 .why {
-  background: lightskyblue url("/images/whyBackground.png") no-repeat;
+  background: lightskyblue url("../images/whyBackground.png") no-repeat;
   background-size: cover;
   height: 704px;
   margin: 0 auto;
@@ -402,7 +402,7 @@ a {
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  background: url("/images/svg/line.svg") no-repeat center top;
+  background: url("../images/svg/line.svg") no-repeat center top;
 }
 .banner__body__svg-section {
   padding-top: 107px;
@@ -429,7 +429,7 @@ a {
 }
 
 .grand, .grand-two {
-  background: mediumpurple url("/images/grandBackround.png") no-repeat;
+  background: mediumpurple url("../images/grandBackround.png") no-repeat;
   height: 684px;
 }
 .grand__body, .grand-two__body {
@@ -452,7 +452,7 @@ a {
 }
 
 .grand-two {
-  background: darkorange url("/images/grandBackroundTwo.png") no-repeat;
+  background: darkorange url("../images/grandBackroundTwo.png") no-repeat;
   height: 684px;
 }
 .grand-two__body {
@@ -460,7 +460,7 @@ a {
 }
 
 .what {
-  background: url("/images/whatBackround.png") no-repeat;
+  background: url("../images/whatBackround.png") no-repeat;
   height: 680px;
 }
 .what__body > h4 {
@@ -496,7 +496,7 @@ a {
 }
 .what__body__info-block__text > p > span:before {
   content: "";
-  background-image: url("/images/svg/quote-left.svg");
+  background-image: url("../images/svg/quote-left.svg");
   background-repeat: no-repeat;
   display: block;
   width: 20px;
