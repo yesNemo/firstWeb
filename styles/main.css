@@ -267,8 +267,10 @@ a {
   height: 16px;
 }
 .header__footer {
-  text-align: center;
-  padding-top: 271px;
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translate(-50%);
 }
 .header__footer > p {
   text-align: center;
@@ -349,12 +351,12 @@ a {
 .why {
   background: lightskyblue url("../images/whyBackground.png") no-repeat;
   background-size: cover;
-  height: 704px;
+  min-height: 704px;
   margin: 0 auto;
+  height: 100%;
 }
 .why__body {
   display: flex;
-  gap: 136px;
 }
 .why__body__text-block {
   display: flex;
@@ -364,9 +366,10 @@ a {
   width: 100%;
   height: 100%;
   max-width: 648px;
-  max-height: 344px;
+  min-height: 344px;
   margin: 190px 0;
   overflow: hidden;
+  margin-right: 136px;
 }
 .why__body__text-block > h1 {
   padding-bottom: 24px;
@@ -377,16 +380,14 @@ a {
 .why__body__img-block {
   position: relative;
   margin-top: 124px;
+  margin-bottom: 124px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 424px;
 }
 .why__body__img-block > img {
   width: 100%;
-  height: 100%;
-  max-width: 350px;
-  max-height: 220px;
+  height: auto;
   object-fit: cover;
 }
 .why__body__img-block img:last-child {
@@ -394,18 +395,18 @@ a {
 }
 
 .banner {
-  height: 306px;
   background: #333333;
 }
 .banner__body {
   display: flex;
-  justify-content: space-around;
+  gap: 290px;
   align-items: center;
   height: 100%;
-  background: url("../images/svg/line.svg") no-repeat center top;
+  background: url("../images/svg/line.svg") no-repeat center top 60px;
+  padding-bottom: 59px;
+  padding-top: 107px;
 }
 .banner__body__svg-section {
-  padding-top: 107px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -413,9 +414,13 @@ a {
   gap: 24px;
 }
 .banner__body__svg-section svg {
-  width: 64px;
-  height: 64px;
+  width: 100px;
+  height: 100px;
   fill: red;
+  padding: 16px;
+  background: #333333;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .banner__body__svg-section > p {
   font-family: "Aleo";
@@ -430,19 +435,22 @@ a {
 
 .grand, .grand-two {
   background: mediumpurple url("../images/grandBackround.png") no-repeat;
-  height: 684px;
+  min-height: 684px;
+  height: 100%;
 }
 .grand__body, .grand-two__body {
   display: flex;
+  margin-bottom: 120px;
 }
 .grand__body__text-block, .grand-two__body__text-block {
   max-width: 50%;
   padding: 44px 32px;
   margin-top: 220px;
   background: rgba(35, 35, 35, 0.9);
-  overflow: hidden;
   height: 100%;
-  max-height: 344px;
+}
+.grand__body__text-block > p, .grand-two__body__text-block > p {
+  padding: 1px;
 }
 .grand__body__text-block > h3, .grand-two__body__text-block > h3 {
   padding: 16px 0;
@@ -453,7 +461,6 @@ a {
 
 .grand-two {
   background: darkorange url("../images/grandBackroundTwo.png") no-repeat;
-  height: 684px;
 }
 .grand-two__body {
   justify-content: end;
@@ -461,7 +468,9 @@ a {
 
 .what {
   background: url("../images/whatBackround.png") no-repeat;
-  height: 680px;
+  min-height: 680px;
+  height: 100%;
+  width: 100vw;
 }
 .what__body > h4 {
   text-align: center;
@@ -470,18 +479,19 @@ a {
 .what__body__info-block {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 180px;
+  height: content-box;
 }
-.what__body__info-block > img {
+.what__body__info-block__img-block > img {
   height: 100%;
-  width: 100%;
-  min-width: 440px;
-  min-height: 280px;
   object-fit: cover;
+  display: block;
+  width: auto;
 }
 .what__body__info-block__text {
+  display: block;
   background: #333333;
-  height: 100%;
-  max-height: 280px;
+  height: auto;
   overflow: hidden;
   padding: 48px 60px;
 }
