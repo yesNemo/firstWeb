@@ -433,7 +433,7 @@ a {
           height: 100%;
           object-fit: cover;
           display: block;
-          width: auto;
+          width:-webkit-fill-available;;
           //max-height: 100%;
         }
       }
