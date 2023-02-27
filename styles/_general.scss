@@ -20,9 +20,11 @@ a {
 }
 
 .container {
-  padding: 0 300px 0;
-  width: 100%;
-  max-width: 1920px;
+  padding: 0 30px;
+  //width: 100%;
+  max-width: 1380px;
+  //max-width: 1280px;
+  margin: 0 auto;
 }
 
 //CODE__CODE__CODE__CODE__CODE__CODE__CODE__CODE__CODE__CODE__CODE__CODE__CODE__CODE__
@@ -53,13 +55,13 @@ a {
 }
 
 .header {
-  background: lightskyblue url("../images/headerBackground.png") no-repeat;
-  background-size: cover;
+  background: lightskyblue url("../images/headerBackground.png") center / cover no-repeat;
   height: 100vh;
-  margin: 0 auto;
-
+  min-height: 800px;
+  padding: 295px 0 0 0;
   &__body {
-    padding-top: 295px;
+    display: flex;
+    flex-direction: column;
 
     &__text {
       display: flex;
@@ -103,7 +105,6 @@ a {
       right: 0;
       height: 59px;
 
-      //height: 60px;
       &::placeholder {
         font-family: 'Josefin Sans';
         font-style: normal;
@@ -112,11 +113,11 @@ a {
         line-height: 20px;
         letter-spacing: 0.2em;
         color: #999999;
-        padding: 20px 36px;
+        padding: 20px 0;
       }
       &[type=search]{
         font-size: 20px;
-        padding:0 150px 0 35px;
+        padding:0 150px 0 36px;
       }
     }
 
@@ -157,16 +158,10 @@ a {
   }
 
   &__footer {
-    //text-align: center;
-    //padding-top: 271px;
-    position: absolute;
-    bottom: 120px;
-    left: 50%;
-    transform: translate(-50%);
+    padding-top: 200px;
+    align-items: center;
     & > p {
       text-align: center;
-      position: relative;
-      //styles
       &>a{
         font-family: 'Josefin Sans';
         font-style: normal;
@@ -257,25 +252,29 @@ a {
 .why {
   background: lightskyblue url("../images/whyBackground.png") no-repeat;
   background-size: cover;
-  min-height: 704px;
-  margin: 0 auto;
-  height: 100%;
+  padding: 124px 0;
+  //min-height: 704px;
+  //margin: 0 auto;
+  //height: 100%;
 
   &__body {
     display: flex;
+    justify-content: space-around;
     //gap: 136px;
     &__text-block {
+      margin-top: 66px;
       display: flex;
       flex-direction: column;
       align-items: start;
       padding: 20px;
       width: 100%;
       height: 100%;
+
       max-width: 648px;
-      min-height: 344px;
-      margin: 190px 0;
-      overflow: hidden;
-      margin-right: max(136px);
+      //min-height: 344px;
+      //margin: 190px 0;
+      //overflow: hidden;
+      //margin-right: max(136px);
 
 
       & > h1 {
@@ -296,20 +295,19 @@ a {
 
     &__img-block {
       position: relative;
-      margin-top: 124px;
-      margin-bottom: 124px;
       display: flex;
       flex-direction: column;
       gap: 16px;
-      //min-width: 424px;
 
       & > img {
         width: 100%;
         height: auto;
         object-fit: cover;
+        padding-right: 74px;
       }
       & img:last-child {
-        margin-left: 74px;
+        padding-left: 74px;
+        padding-right: 0;
       }
     }
   }
@@ -320,29 +318,25 @@ a {
   background: #333333;
 
   &__body {
-    display: flex;
-    //justify-content: space-around;
-    gap: 290px;
+    padding: 110px 0 60px;
+    display: grid;
+    grid-template-columns:repeat(3,424px) ;
+    justify-content: center;
     align-items: center;
-    height: 100%;
-    background: url("../images/svg/line.svg") no-repeat center top 60px;
-    padding-bottom: 59px;
-    padding-top: 107px;
-    &__svg-section {
+     background: url("../images/svg/line.svg")  top 60px center no-repeat;
+    background-size: 872px auto ;
+      &__svg-section {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 24px;
+      gap: 4px;
       & svg {
-        width: 100px;
-        height: 100px;
-        fill: red;
+
+        width: 96px;
+        height: 96px;
         padding: 16px;
         background:  #333333;
-        //background:  red;
-        border-radius: 50%;
-        overflow: hidden;
       }
 
       & > p {
@@ -360,22 +354,18 @@ a {
 }
 //SECTION-GRAND__SECTION-GRAND__SECTION-GRAND__SECTION-GRAND__SECTION-GRAND__SECTION-GRAND__SECTION-GRAND__SECTION-GRAND
 .grand, .grand-two{
-  background: mediumpurple url("../images/grandBackround.png") no-repeat;
+  background: mediumpurple url("../images/grandBackround.png") center / cover no-repeat;
   min-height: 684px;
   height: 100%;
+  padding: 220px 0 120px;
 
   &__body {
     display: flex;
-    margin-bottom: 120px;
-    //justify-content: end;
     &__text-block {
       max-width: 50%;
       padding: 44px 32px;
-      margin-top: 220px;
       background: rgba(35, 35, 35, 0.9);
-      //overflow: hidden;
       height: 100%;
-      //max-height: 344px;
 
       & > p {
         @extend %fontsStyleText;
@@ -395,53 +385,39 @@ a {
   }
 }
 .grand-two {
-  background: darkorange url("../images/grandBackroundTwo.png") no-repeat;
+  background: darkorange url("../images/grandBackroundTwo.png") center / cover no-repeat;
   &__body{
     justify-content: end;
   }
 }
 //SectionWHAT__SectionWHAT__SectionWHAT__SectionWHAT__SectionWHAT__SectionWHAT__SectionWHAT__SectionWHAT__SectionWHAT
 .what{
-  background: url("../images/whatBackround.png") no-repeat;
-  min-height: 680px;
-  height: 100%;
-  width: 100vw;
+  background: url("../images/whatBackround.png") center / cover no-repeat;
+  padding: 120px 0 160px;
   &__body{
     //display: flex;
     &>h4{
       text-align: center;
       @extend %fontsStyleTitle;
-      padding: 120px 0 60px;
+      padding: 0 0 60px;
     }
     &__info-block{
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 180px;
-      height: content-box;
+     display: grid;
+    grid-template-columns:1fr 2fr;
 
       &__img-block{
-        //height: 100%;
-        //width: 100%;
-        //min-width: 440px;
-        //min-height:280px;
-        //object-fit: cover;
-        //display: block;
-        //width: auto;
-        //max-height: 100%;
-        //width: 100%;
         &>img{
           height: 100%;
           object-fit: cover;
           display: block;
-          width: auto;
-          //max-height: 100%;
+          width: 100%;
+          object-position: top;
         }
       }
       &__text{
         display: block;
         background: #333333;
         height: auto;
-        overflow: hidden;
         &>h3{
           @extend %fontsStyleGrandTitle;
           padding-bottom: 16px;
@@ -500,7 +476,6 @@ a {
     &__links{
       &>ul{
         display: flex;
-        //justify-content: space-between;
         gap: 30px;
         &>li svg{
           width: 30px;

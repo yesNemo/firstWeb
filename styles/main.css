@@ -141,9 +141,9 @@ a {
 }
 
 .container {
-  padding: 0 300px 0;
-  width: 100%;
-  max-width: 1920px;
+  padding: 0 30px;
+  max-width: 1380px;
+  margin: 0 auto;
 }
 
 .logo a {
@@ -173,13 +173,14 @@ a {
 }
 
 .header {
-  background: lightskyblue url("../images/headerBackground.png") no-repeat;
-  background-size: cover;
+  background: lightskyblue url("../images/headerBackground.png") center/cover no-repeat;
   height: 100vh;
-  margin: 0 auto;
+  min-height: 800px;
+  padding: 295px 0 0 0;
 }
 .header__body {
-  padding-top: 295px;
+  display: flex;
+  flex-direction: column;
 }
 .header__body__text {
   display: flex;
@@ -226,11 +227,11 @@ a {
   line-height: 20px;
   letter-spacing: 0.2em;
   color: #999999;
-  padding: 20px 36px;
+  padding: 20px 0;
 }
 .header__search-form > input[type=search] {
   font-size: 20px;
-  padding: 0 150px 0 35px;
+  padding: 0 150px 0 36px;
 }
 .header__search-form > button {
   position: absolute;
@@ -267,14 +268,11 @@ a {
   height: 16px;
 }
 .header__footer {
-  position: absolute;
-  bottom: 120px;
-  left: 50%;
-  transform: translate(-50%);
+  padding-top: 200px;
+  align-items: center;
 }
 .header__footer > p {
   text-align: center;
-  position: relative;
 }
 .header__footer > p > a {
   font-family: "Josefin Sans";
@@ -351,14 +349,14 @@ a {
 .why {
   background: lightskyblue url("../images/whyBackground.png") no-repeat;
   background-size: cover;
-  min-height: 704px;
-  margin: 0 auto;
-  height: 100%;
+  padding: 124px 0;
 }
 .why__body {
   display: flex;
+  justify-content: space-around;
 }
 .why__body__text-block {
+  margin-top: 66px;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -366,10 +364,6 @@ a {
   width: 100%;
   height: 100%;
   max-width: 648px;
-  min-height: 344px;
-  margin: 190px 0;
-  overflow: hidden;
-  margin-right: 136px;
 }
 .why__body__text-block > h1 {
   padding-bottom: 24px;
@@ -379,8 +373,6 @@ a {
 }
 .why__body__img-block {
   position: relative;
-  margin-top: 124px;
-  margin-bottom: 124px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -389,38 +381,37 @@ a {
   width: 100%;
   height: auto;
   object-fit: cover;
+  padding-right: 74px;
 }
 .why__body__img-block img:last-child {
-  margin-left: 74px;
+  padding-left: 74px;
+  padding-right: 0;
 }
 
 .banner {
   background: #333333;
 }
 .banner__body {
-  display: flex;
-  gap: 290px;
+  padding: 110px 0 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 424px);
+  justify-content: center;
   align-items: center;
-  height: 100%;
-  background: url("../images/svg/line.svg") no-repeat center top 60px;
-  padding-bottom: 59px;
-  padding-top: 107px;
+  background: url("../images/svg/line.svg") top 60px center no-repeat;
+  background-size: 872px auto;
 }
 .banner__body__svg-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 4px;
 }
 .banner__body__svg-section svg {
-  width: 100px;
-  height: 100px;
-  fill: red;
+  width: 96px;
+  height: 96px;
   padding: 16px;
   background: #333333;
-  border-radius: 50%;
-  overflow: hidden;
 }
 .banner__body__svg-section > p {
   font-family: "Aleo";
@@ -434,18 +425,17 @@ a {
 }
 
 .grand, .grand-two {
-  background: mediumpurple url("../images/grandBackround.png") no-repeat;
+  background: mediumpurple url("../images/grandBackround.png") center/cover no-repeat;
   min-height: 684px;
   height: 100%;
+  padding: 220px 0 120px;
 }
 .grand__body, .grand-two__body {
   display: flex;
-  margin-bottom: 120px;
 }
 .grand__body__text-block, .grand-two__body__text-block {
   max-width: 50%;
   padding: 44px 32px;
-  margin-top: 220px;
   background: rgba(35, 35, 35, 0.9);
   height: 100%;
 }
@@ -460,39 +450,35 @@ a {
 }
 
 .grand-two {
-  background: darkorange url("../images/grandBackroundTwo.png") no-repeat;
+  background: darkorange url("../images/grandBackroundTwo.png") center/cover no-repeat;
 }
 .grand-two__body {
   justify-content: end;
 }
 
 .what {
-  background: url("../images/whatBackround.png") no-repeat;
-  min-height: 680px;
-  height: 100%;
-  width: 100vw;
+  background: url("../images/whatBackround.png") center/cover no-repeat;
+  padding: 120px 0 160px;
 }
 .what__body > h4 {
   text-align: center;
-  padding: 120px 0 60px;
+  padding: 0 0 60px;
 }
 .what__body__info-block {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 180px;
-  height: content-box;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 .what__body__info-block__img-block > img {
   height: 100%;
   object-fit: cover;
   display: block;
-  width: auto;
+  width: 100%;
+  object-position: top;
 }
 .what__body__info-block__text {
   display: block;
   background: #333333;
   height: auto;
-  overflow: hidden;
   padding: 48px 60px;
 }
 .what__body__info-block__text > h3 {
